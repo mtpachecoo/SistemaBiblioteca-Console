@@ -1,6 +1,8 @@
 
     public class Livro{
-        public string Titulo { get; private set; }
+  
+
+    public string Titulo { get; private set; }
         public string Autor { get; private set; }
         public bool Disponibilidade { get; private set; }
 
@@ -10,7 +12,12 @@
             Disponibilidade = true;
         }
 
-        public string Emprestar(){
+    public Livro(Livro _livro)
+    {
+       _livro = _livro;
+    }
+
+    public string Emprestar(){
             if (!Disponibilidade){
                 return "Erro: O livro ja está emprestado.";
             }
